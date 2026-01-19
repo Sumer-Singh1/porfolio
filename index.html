@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sumer Singh | BCA Student</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{
+  font-family:'Poppins',sans-serif;
+  background:radial-gradient(circle at top,#020617,#000);
+  color:#e5e7eb;
+}
+
+/* ---- Glass Effect ---- */
+.glass{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.15);
+  box-shadow:0 0 30px rgba(99,102,241,0.15);
+  border-radius:25px;
+}
+
+/* ---- Sections ---- */
+section{
+  min-height:100vh;
+  padding:90px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+/* ---- Hero ---- */
+#hero{text-align:center}
+#hero h1{font-size:1.3rem;opacity:.8}
+.name{
+  font-family:'Great Vibes',cursive;
+  font-size:4.2rem;
+  color:#22d3ee;
+  border-right:3px solid #22d3ee;
+  white-space:nowrap;
+  overflow:hidden;
+  width:0;
+  animation:typing 3s steps(20) forwards,blink .7s infinite;
+}
+#hero p{margin-top:15px;font-size:1.1rem;color:#a5b4fc}
+
+nav{
+  margin-top:35px;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+nav a{
+  padding:10px 22px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.08);
+  color:#22d3ee;
+  transition:.3s;
+}
+nav a:hover{
+  background:#6366f1;
+  color:#fff;
+}
+
+/* ---- About ---- */
+.about-card{
+  max-width:900px;
+  padding:40px;
+}
+.about-card h2{color:#22d3ee;margin-bottom:15px}
+.about-card p{line-height:1.7;opacity:.9}
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:25px;
+}
+.box{
+  padding:20px;
+}
+.box h3{color:#a5b4fc;margin-bottom:8px}
+
+/* ---- Projects ---- */
+#projects h2{color:#22d3ee;margin-bottom:30px}
+.projects{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.project{
+  padding:25px;
+  transition:.3s;
+}
+.project:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 40px rgba(34,211,238,.4);
+}
+.project h3{color:#a5b4fc}
+.project a{
+  display:inline-block;
+  margin-top:10px;
+  color:#22d3ee;
+}
+
+/* ---- Skills ---- */
+#skills h2{color:#22d3ee;margin-bottom:25px}
+.skill{
+  width:320px;
+  margin:12px 0;
+}
+.bar{
+  height:14px;
+  border-radius:20px;
+  background:rgba(255,255,255,.1);
+  overflow:hidden;
+}
+.fill{
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,#22d3ee,#6366f1);
+  transition:1.2s;
+}
+
+/* ---- Contact ---- */
+#contact h2{color:#22d3ee}
+.socials{
+  display:flex;
+  gap:30px;
+  margin-top:25px;
+}
+.socials a{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.1);
+  color:#22d3ee;
+  transition:.3s;
+}
+.socials a:hover{
+  background:#6366f1;
+  color:#fff;
+  box-shadow:0 0 20px #6366f1;
+}
+
+@keyframes typing{to{width:14ch}}
+@keyframes blink{50%{border-color:transparent}}
+
+@media(max-width:768px){
+  .name{font-size:3.2rem}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section id="hero">
+  <h1>Hello, I'm</h1>
+  <h2 class="name">Sumer Singh</h2>
+  <p>BCA 1st Year Student | Aspiring Web Developer</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-card glass">
+    <h2>About Me</h2>
+    <p>
+      I'm <b>Sumer Singh</b>, a <b>BCA 1st year student at Aryan College</b>.
+      I'm currently building strong fundamentals in web development and actively
+      looking for an <b>internship</b> to gain real-world experience.
+    </p>
+
+    <div class="about-grid">
+      <div class="box glass">
+        <h3>Education</h3>
+        <p>BCA – 1st Year<br>Aryan College</p>
+      </div>
+      <div class="box glass">
+        <h3>Focus</h3>
+        <p>HTML, CSS & Core Web Basics</p>
+      </div>
+      <div class="box glass">
+        <h3>Goal</h3>
+        <p>Web Development Internship</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project glass">
+      <h3>Calculator</h3>
+      <p>Basic calculator built using HTML, CSS and JavaScript to understand DOM and logic.</p>
+      <a href="https://github.com/Sumer-Singh1" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skill">
+    <div>HTML</div>
+    <div class="bar"><div class="fill" style="width:90%"></div></div>
+  </div>
+
+  <div class="skill">
+    <div>CSS</div>
+    <div class="bar"><div class="fill" style="width:80%"></div></div>
+  </div>
+
+  <div class="skill">
+    <div>JavaScript (Basics)</div>
+    <div class="bar"><div class="fill" style="width:65%"></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="socials">
+    <a href="https://github.com/Sumer-Singh1" target="_blank">GH</a>
+    <a href="mailto:sumer@example.com">✉</a>
+  </div>
+</section>
+
+<script>
+const fills=document.querySelectorAll('.fill');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.style.width=e.target.style.width;
+    }
+  })
+},{threshold:.6});
+fills.forEach(f=>obs.observe(f));
+</script>
+
+</body>
+</html>
+
